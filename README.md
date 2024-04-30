@@ -8,6 +8,12 @@ This is a Discord application that combats spam-bot posting in the simplest way 
 
 ## Showcase
 
+![Discord_lxEkppJI6N](https://github.com/Mirasaki/discord-onlybans/assets/57721238/5e265553-f629-49c0-91da-574dd543d636)
+
+![Discord_J6iTJISmHe](https://github.com/Mirasaki/discord-onlybans/assets/57721238/68db5cc9-f5f8-4ebd-bc05-6ea8625b48c8)
+
+![Discord_FKZL9JopLq](https://github.com/Mirasaki/discord-onlybans/assets/57721238/ca12c1de-513a-4c66-9c42-fa59d04b9e59)
+
 </details>
 
 ## Configuration
