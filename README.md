@@ -2,6 +2,14 @@
 
 This is a Discord application that combats spam-bot posting in the simplest way possible, post in a channel - get banned. This is effective because the spam bot accounts post their ads in all channels that are available to them.
 
+<details>
+
+<summary>Showcase</summary>
+
+## Showcase
+
+</details>
+
 ## Configuration
 
 - `/only-bans`: Manage your (channel) ban list settings
