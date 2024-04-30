@@ -92,7 +92,7 @@ export const banForSpam = async (
     if (loggingChannel?.isTextBased()) {
       loggingChannel.send({
         content: [
-          `User ${member.user.username} (\`${member.user.id}\`) has been OnlyBanned in #${channel.name}!`,
+          `User ${member.user.username} (\`${member.user.id}\`) has been OnlyBanned in ${channel}!`,
           `Message: ||\`\`\`\n${
             message.content.length > 1000
               ? `${message.content.substring(0, 1000)}...`
@@ -217,17 +217,17 @@ export const promptConfirmation = async (
       const prompt = await confirmationChannel.send({
         content: guildSettings.confirmation.adminRoleId ? [
           `<@&${guildSettings.confirmation.adminRoleId}> User ${member}`,
-          `(\`${member.user.id}\`) has triggered OnlyBans in #${channel.name}!`
+          `(\`${member.user.id}\`) has triggered OnlyBans in ${channel}!`
         ].join(' ') : [
           `User ${member.user.username} (\`${member.user.id}\`)`,
-          `has triggered OnlyBans in #${channel.name}!`
+          `has triggered OnlyBans in ${channel}!`
         ].join(' '),
         embeds: [
           new EmbedBuilder()
             .setColor(Colors.Aqua)
             .setTitle('Ban Confirmation')
             .setDescription([
-              `User ${member.user.username} (\`${member.user.id}\`) has triggered OnlyBans in #${channel.name}!`,
+              `User ${member.user.username} (\`${member.user.id}\`) has triggered OnlyBans in ${channel}!`,
               `Message: ||\`\`\`\n${
                 message.content.length > 1000
                   ? `${message.content.substring(0, 1000)}...`
