@@ -18,7 +18,7 @@ Please note, a [Discord Application](https://wiki.mirasaki.dev/docs/discord-crea
 The quickest, and easiest, way to host/use this bot is by deploying it inside of a [Docker](https://www.docker.com/) container. We recommend [Docker Desktop](https://www.docker.com/products/docker-desktop/).
 
 1. Download the [latest release](<https://github.com/mirasaki/discord-onlybans/releases`>) or `git clone git@github.com:mirasaki/discord-onlybans.git` the repo
-2. Rename `/config.example.json` to `/config.json` and provide your configuration
+2. Rename `/config.example.json` to `config.json` and provide your configuration
 3. Start the application: `docker compose up`
 
 ### 🖥️ Run as a plain NodeJS app
@@ -27,5 +27,5 @@ The quickest, and easiest, way to host/use this bot is by deploying it inside of
   - [Node.js](https://nodejs.org/en/) v16.6.0 or newer
 - Download the [latest release](<https://github.com/mirasaki/discord-onlybans/releases`>) or `git clone git@github.com:mirasaki/discord-onlybans.git` the repo
 - Run `npm install --omit=dev` in the project root folder
-- Edit the newly created `/config.json` file and provide your configuration
+- Rename `/config.example.json` to `config.json` and provide your configuration
 - Start the application: `npm run start`
