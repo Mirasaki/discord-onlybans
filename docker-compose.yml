@@ -1,0 +1,13 @@
+services:
+  client:
+    container_name: onlybans-client
+    restart: unless-stopped
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    environment:
+      - NODE_ENV=production
+    volumes:
+      - ./config.json:/app/config.json
+      - ./db.json:/app/db.json
+      - ./db.json~:/app/db.json~

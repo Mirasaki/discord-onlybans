@@ -1,0 +1,46 @@
+{
+  "name": "discord-onlybans",
+  "version": "0.0.1",
+  "description": "A Discord spam-bot protection application",
+  "main": "dist/src/index.js",
+  "keywords": [
+    "discord",
+    "spam",
+    "bot",
+    "protection",
+    "bans",
+    "onlybans",
+    "spam-bot"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/Mirasaki/discord-onlybans",
+  "author": "Richard Hillebrand <me@mirasaki.dev> (https://mirasaki.dev/)",
+  "repository": "github:mirasaki/discord-onlybans",
+  "scripts": {
+    "clean:dist": "rimraf ./dist",
+    "clean:modules": "rimraf ./node_modules",
+    "clean": "npm run clean:dist && npm run clean:modules",
+    "lint": "npx eslint src/**/*.ts",
+    "lint:fix": "npx eslint --fix src/**/*.ts",
+    "prebuild": "npm run clean:dist",
+    "build": "tsc",
+    "start": "node dist/src/index",
+    "start:dev": "ts-node-dev --respawn --transpile-only src/index.ts",
+    "dev": "npm run start:dev",
+    "pretest": "npm run build"
+  },
+  "devDependencies": {
+    "@types/lokijs": "^1.5.14",
+    "@types/node": "^18.11.9",
+    "@typescript-eslint/eslint-plugin": "^5.42.1",
+    "@typescript-eslint/parser": "^5.42.1",
+    "eslint": "^8.27.0",
+    "rimraf": "^3.0.2",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^5.4.5"
+  },
+  "dependencies": {
+    "discord.js": "^14.14.1",
+    "lokijs": "^1.5.12"
+  }
+}
