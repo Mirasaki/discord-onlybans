@@ -6,6 +6,8 @@ import { databaseInitialize, db, updateGuild } from './database';
 import { messageCreate } from './modules/listeners';
 import { onlyBansCommand, settingsCommand } from './modules/commands';
 
+if (!process.env.NODE_ENV) process.env.NODE_ENV = 'production';
+
 const commands = [ onlyBansCommand, settingsCommand ];
 
 console.log('OnlyBans is starting up...');
@@ -20,7 +22,7 @@ const client = new Client({
 });
 
 client.on('ready', (c) => {
-  console.log(`OnlyBans is ready! Logged in as ${c.user.tag} in ${process.env.NODE_ENV ?? 'development'} mode!`);
+  console.log(`OnlyBans is ready! Logged in as ${c.user.tag} in ${process.env.NODE_ENV} mode!`);
 
   const route = process.env.NODE_ENV === 'production' || !config.guildId
     ? Routes.applicationCommands(config.appId)
