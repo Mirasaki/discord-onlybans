@@ -39,12 +39,12 @@ export const settingsCommandRunFn = async (
           .setColor(Colors.Aqua)
           .setTitle('Settings')
           .setDescription([
-            `Require Channel Count: ${guildSettings.requireChannelCount ?? 'None'}`,
-            `Confirmation Enabled: ${guildSettings.confirmation.enabled ? 'Yes' : 'No'}`,
-            `Confirmation Channel: ${guildSettings.confirmation.channelId
+            `**Require Channel Count:** ${guildSettings.requireChannelCount ?? 'None'}`,
+            `**Confirmation Enabled:** ${guildSettings.confirmation.enabled ? 'Yes' : 'No'}`,
+            `**Confirmation Channel:** ${guildSettings.confirmation.channelId
               ? guild.channels.cache.get(guildSettings.confirmation.channelId)?.name ?? 'unknown'
               : 'None'}`,
-            `Confirmation Admin Role IDs: ${
+            `**Confirmation Admin Role IDs:** ${
               guildSettings.confirmation.adminRoleId
                 ? guild.roles.cache.get(guildSettings.confirmation.adminRoleId)?.name ?? 'unknown'
                 : 'None'

@@ -46,15 +46,15 @@ export const onlyBansCommandRunFn = async (
         color: Colors.Aqua,
         title: `Channel #${channel?.name ?? 'unknown'}`,
         description: [
-          `Logging Channel: ${config.loggingChannelId
+          `**Logging Channel:** ${config.loggingChannelId
             ? guild.channels.cache.get(config.loggingChannelId)?.name ?? 'unknown'
             : 'None'}`,
-          `URLs Only: ${config.urlsOnly ? 'Yes' : 'No'}`,
-          `Invites Only: ${config.invitesOnly ? 'Yes' : 'No'}`,
-          `Initial Message: \`\`\`\n${config.messageTemplates.initial.message}\n\`\`\``,
-          `Ban Message Type: ${config.messageTemplates.ban.type}`,
-          `Ban Message Delete After: ${config.messageTemplates.ban.deleteAfter ?? 'Never'}`,
-          `Ban Message: \`\`\`\n${config.messageTemplates.ban.message}\n\`\`\``,
+          `**URLs Only:** ${config.urlsOnly ? 'Yes' : 'No'}`,
+          `**Invites Only:** ${config.invitesOnly ? 'Yes' : 'No'}`,
+          `**Initial Message:** \`\`\`\n${config.messageTemplates.initial.message}\n\`\`\``,
+          `**Ban Message Type:** ${config.messageTemplates.ban.type}`,
+          `**Ban Message Delete After:** ${config.messageTemplates.ban.deleteAfter ?? 'Never'}`,
+          `**Ban Message:** \`\`\`\n${config.messageTemplates.ban.message}\n\`\`\``,
         ].join('\n'),
       };
     });

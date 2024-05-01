@@ -227,8 +227,8 @@ export const promptConfirmation = async (
             .setColor(Colors.Aqua)
             .setTitle('Ban Confirmation')
             .setDescription([
-              `User ${member.user.username} (\`${member.user.id}\`) has triggered OnlyBans in ${channel}!`,
-              `Message: ||\`\`\`\n${
+              `User **__${member.user.username}__** (\`${member.user.id}\`) has triggered OnlyBans in ${channel}!`,
+              `**Message:** ||\`\`\`\n${
                 message.content.length > 1000
                   ? `${message.content.substring(0, 1000)}...`
                   : message.content
