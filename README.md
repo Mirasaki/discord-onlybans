@@ -40,6 +40,7 @@ The quickest, and easiest, way to host/use this bot is by deploying it inside of
 - Install the additional pre-requisites:
   - [Node.js](https://nodejs.org/en/) v16.6.0 or newer
 - Download the [latest release](<https://github.com/mirasaki/discord-onlybans/releases`>) or `git clone git@github.com:mirasaki/discord-onlybans.git` the repo
-- Run `npm install --omit=dev` in the project root folder
+- Run `npm install` in the project root folder
 - Rename `/config.example.json` to `config.json` and provide your configuration
+- Build the application: `npm run build`
 - Start the application: `npm run start`
