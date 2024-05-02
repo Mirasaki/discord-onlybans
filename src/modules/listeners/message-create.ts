@@ -40,22 +40,30 @@ export const messageCreate = async (client: Client<true>, message: Message) => {
   console.log(`${debugTag} Message is in a channel that's being watched for spam messages!`);
 
   // Require URL if configured
-  if (onlyBansCfg.urlsOnly && (
-    !message.content.includes('http://')
-    || !message.content.includes('https://')
-    || !message.content.includes('discord.gg')
-    || !message.content.includes('discord.com')
-  )) {
+  if (
+    onlyBansCfg.urlsOnly
+    && !message.content.includes('http://')
+    && !message.content.includes('https://')
+    && !message.content.includes('discord.gg')
+    && !message.content.includes('discord.com')
+  ) {
     console.log(`${debugTag} Message does NOT contain a URL, skipping!`);
+    message.delete().catch((err) => {
+      console.error(`${debugTag} Error encountered while deleting message:`, err);
+    });
     return;
   }
 
   // Require invite link if configured
-  if (onlyBansCfg.invitesOnly && (
-    !message.content.includes('discord.gg')
-    || !message.content.includes('discord.com')
-  )) {
+  if (
+    onlyBansCfg.invitesOnly
+    && !message.content.includes('discord.gg')
+    && !message.content.includes('discord.com')
+  ) {
     console.log(`${debugTag} Message does NOT contain an invite link, skipping!`);
+    message.delete().catch((err) => {
+      console.error(`${debugTag} Error encountered while deleting message:`, err);
+    });
     return;
   }
 
