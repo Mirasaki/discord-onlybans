@@ -10,4 +10,4 @@ services:
     volumes:
       - ./config.json:/app/config.json
       - ./db.json:/app/db.json
-      - ./db.json~:/app/db.json~
+      
